@@ -393,7 +393,7 @@ public class HaitiClinicalPatientDataColFormat {
 		return loginName;
 	}
 
-	public void setLoginName(String reportDate) {
+	public void setLoginName(String loginName) {
 		this.loginName = loginName;
 	}
 }
