@@ -76,7 +76,7 @@ public class HaitiClinicalPatientDataColFormat {
     	setHealthDistrict(data.getHealthDistrict());
     	setHealthRegion( data.getHealthRegion());
     	setLabOrderType(data.getLabOrderType());
-		setLoginName(data.getLoginName);
+		setLoginName(data.getLoginName());
     	//private String testName;
     	//private String testRefRange;
     	//private String result;

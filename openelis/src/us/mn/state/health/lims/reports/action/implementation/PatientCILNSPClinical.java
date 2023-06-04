@@ -159,6 +159,8 @@ public class PatientCILNSPClinical extends HaitiPatientReport implements IReport
 		data.setStNumber(parentData.getStNumber());
 		data.setAccessionNumber(parentData.getAccessionNumber());
 		data.setLabOrderType(parentData.getLabOrderType());
+		data.setLoginName(parentData.getLoginName());
+
 	}
 
 	@Override
