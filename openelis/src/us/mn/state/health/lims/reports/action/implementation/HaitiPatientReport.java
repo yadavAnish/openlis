@@ -759,7 +759,7 @@ public abstract class HaitiPatientReport extends Report {
         HaitiClinicalPatientData data = new HaitiClinicalPatientData();
         String testName = null;
         String sortOrder = "";
-        String loginNamee=getLoginName();
+        String loginNamee=data.getLoginName();
 
         boolean doAnalysis = reportAnalysis != null;
 
@@ -783,7 +783,7 @@ public abstract class HaitiPatientReport extends Report {
         data.setHealthRegion(getLazyPatientIdentity(healthRegion, HEALTH_REGION_IDENTITY_TYPE_ID));
         data.setHealthDistrict(getLazyPatientIdentity(healthDistrict, HEALTH_DISTRICT_IDENTITY_TYPE_ID));
         data.setTestName(testName);
-        data.setLoginName(loginNamee());
+        data.setLoginName(loginNamee);
         if (currentProvider != null) {
             data.setPatientSiteNumber(currentProvider.getExternalId());
         }
