@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/lib/jfreechart-1.0.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/lib/jdt-compiler-3.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/lib/commons-digester.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/lib/jasperreports-3.7.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/lib/jugbbant-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/lib/jasperreports-applet-3.7.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/lib/log4j-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/lib/commons-collections-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/lib/commons-beanutils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

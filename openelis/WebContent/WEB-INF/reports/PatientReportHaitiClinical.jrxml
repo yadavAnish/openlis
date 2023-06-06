@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PatientReport" pageWidth="485" pageHeight="650" whenNoDataType="AllSectionsNoDetail" columnWidth="465" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" whenResourceMissingType="Empty">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="1.4641000000000006"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<import value="java.util.*"/>
@@ -68,7 +68,6 @@
 	<field name="resultType" class="java.lang.String"/>
 	<field name="collectionDate" class="java.lang.String"/>
 	<field name="reportDate" class="java.lang.String"/>
-	<field name="loginName" class="java.lang.String"/>
 	<group name="person" isStartNewPage="true" isResetPageNumber="true">
 		<groupExpression><![CDATA[$F{accessionNumber}]]></groupExpression>
 	</group>
@@ -81,11 +80,11 @@
 					<subreportParameter name="reportTitle">
 						<subreportParameterExpression><![CDATA["Laboratory Report"]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="labName1">
-						<subreportParameterExpression><![CDATA[$P{siteName}]]></subreportParameterExpression>
-					</subreportParameter>
 					<subreportParameter name="orderFinishDate">
 						<subreportParameterExpression><![CDATA[$F{orderFinishDate}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="labName1">
+						<subreportParameterExpression><![CDATA[$P{siteName}]]></subreportParameterExpression>
 					</subreportParameter>
 					<subreportParameter name="siteLogo">
 						<subreportParameterExpression><![CDATA[$P{siteLogo}]]></subreportParameterExpression>
@@ -96,11 +95,11 @@
 					<subreportParameter name="directorName">
 						<subreportParameterExpression><![CDATA[$P{directorName}]]></subreportParameterExpression>
 					</subreportParameter>
-					<subreportParameter name="completeFlag">
-						<subreportParameterExpression><![CDATA[$F{completeFlag}]]></subreportParameterExpression>
-					</subreportParameter>
 					<subreportParameter name="labName2">
 						<subreportParameterExpression><![CDATA[$P{additionalSiteInfo}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="completeFlag">
+						<subreportParameterExpression><![CDATA[$F{completeFlag}]]></subreportParameterExpression>
 					</subreportParameter>
 					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
 					<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + $P{headerName}]]></subreportExpression>
@@ -347,11 +346,6 @@
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
 					<text><![CDATA[Valid Range]]></text>
 				</staticText>
-				<textField>
-					<reportElement x="226" y="62" width="100" height="20"/>
-					<textElement/>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{loginName}]]></textFieldExpression>
-				</textField>
 			</band>
 		</groupHeader>
 		<groupFooter>
@@ -385,11 +379,6 @@
 					<textElement verticalAlignment="Middle"/>
 					<text><![CDATA[Date:]]></text>
 				</staticText>
-				<textField>
-					<reportElement x="100" y="21" width="100" height="20"/>
-					<textElement/>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{loginName}]]></textFieldExpression>
-				</textField>
 			</band>
 		</groupFooter>
 	</group>
@@ -537,19 +526,6 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle"/>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{result}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement style="boldIfAbnormal" x="162" y="0" width="64" height="18">
-						<printWhenExpression><![CDATA[!$F{resultType}.equals("R")]]></printWhenExpression>
-					</reportElement>
-					<box rightPadding="4">
-						<topPen lineWidth="0.0" lineColor="#CCCCCC"/>
-						<leftPen lineWidth="0.5"/>
-						<bottomPen lineWidth="0.2" lineColor="#CCCCCC"/>
-						<rightPen lineWidth="0.5"/>
-					</box>
-					<textElement textAlignment="Right" verticalAlignment="Middle"/>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{result}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">

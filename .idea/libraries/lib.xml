@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/jmock-junit3-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/bsh-core-2.0b4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/cglib-nodep-2.1_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/jmock-legacy-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/jmock-junit4-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/hamcrest-core-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/cglib-2.1_3-src.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/objenesis-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/mockito-all-1.9.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/junit-4.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/hamcrest-library-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/jmock-script-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/openelis/test/lib/jmock-2.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

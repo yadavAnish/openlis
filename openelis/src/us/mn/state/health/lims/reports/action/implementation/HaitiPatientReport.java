@@ -131,6 +131,8 @@ public abstract class HaitiPatientReport extends Report {
     private List<String> handledOrders;
 
     private String lowerNumber;
+    private UserSessionData usd =null;
+
     private String upperNumber;
     protected String STNumber = null;
     protected String subjectNumber = null;
@@ -211,6 +213,8 @@ public abstract class HaitiPatientReport extends Report {
 
     }
 
+
+
     abstract protected String getReportNameForParameterPage();
 
     abstract protected String getSiteLogo();
@@ -255,6 +259,18 @@ public abstract class HaitiPatientReport extends Report {
             e.printStackTrace();
         }
     }
+
+
+
+    protected void setLoginName(UserSessionData usd) {
+	    if ( request.getSession().getAttribute(IActionConstants.USER_SESSION_DATA) != null ) {
+        usd = (UserSessionData)request.getSession().getAttribute(IActionConstants.USER_SESSION_DATA);
+	    Sting a=usd.getElisUserName()
+	}
+	
+
+        }
+
 
             public void initializeReport(BaseActionForm dynaForm) {
                 super.initializeReport();
@@ -759,7 +775,6 @@ public abstract class HaitiPatientReport extends Report {
         HaitiClinicalPatientData data = new HaitiClinicalPatientData();
         String testName = null;
         String sortOrder = "";
-        String loginNamee=data.getLoginName();
 
         boolean doAnalysis = reportAnalysis != null;
 
@@ -783,7 +798,8 @@ public abstract class HaitiPatientReport extends Report {
         data.setHealthRegion(getLazyPatientIdentity(healthRegion, HEALTH_REGION_IDENTITY_TYPE_ID));
         data.setHealthDistrict(getLazyPatientIdentity(healthDistrict, HEALTH_DISTRICT_IDENTITY_TYPE_ID));
         data.setTestName(testName);
-        data.setLoginName(loginNamee);
+        data.setLoginName(a);
+        
         if (currentProvider != null) {
             data.setPatientSiteNumber(currentProvider.getExternalId());
         }
